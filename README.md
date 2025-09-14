@@ -53,12 +53,10 @@ Flash and Monitor:idf.py -p /dev/ttyUSB0 flash monitor
 
 
 Expected Output
-In simulation mode (SIMULATE_ENCODER enabled), logs show:
-I (xxx) MAIN: Starting motor control loop!
-I (xxx) ENCODER: Initialized simulated encoder
-I (xxx) STATE_MACHINE: Transitioned to RUN
-I (xxx) ENCODER: Simulated speed: 400.50 Hz
-I (xxx) STATE_MACHINE: Running: Speed=400.50 Hz, Duty=8.01%
+
+
+<img width="1049" height="278" alt="image" src="https://github.com/user-attachments/assets/736445a4-bf4b-4eeb-ae81-0bc02f864a4a" />
+
 ...
 
 In real encoder mode (disable SIMULATE_ENCODER), logs show:
@@ -78,23 +76,13 @@ Monitoring: Use ESP-IDF logs to track state, speed, and PWM duty cycle.
 Optional Testing: Connect an LED to GPIO18 to visualize PWM output.
 
 Project Structure
-├── main/                   # Source and header files
-│   ├── main.c              # Main application logic
-│   ├── system.c            # System clock configuration
-│   ├── motor_pwm.c         # PWM generation and control
-│   ├── encoder_sim.c       # Real or simulated encoder input
-│   ├── pid_controller.c    # PID controller implementation
-│   ├── state_machine.c     # State machine for motor control
-│   ├── motor_pwm.h         # PWM configuration and interfaces
-│   ├── state_machine.h     # State machine definitions
-│   ├── system.h            # System configuration interfaces
-│   ├── pid_controller.h    # PID controller interfaces
-│   ├── encoder_sim.h       # Encoder input interfaces
-│   ├── CMakeLists.txt      # ESP-IDF component build configuration
-├── README.md               # Project documentation
-├── LICENSE                 # MIT License
-├── .gitignore              # Git ignore file
-├── CMakeLists.txt          # Root ESP-IDF build configuration
+
+
+<img width="1334" height="297" alt="image" src="https://github.com/user-attachments/assets/610155fe-b942-4343-87c8-133694fbe7fb" />
+
+
+
+
 
 Testing and Validation
 
