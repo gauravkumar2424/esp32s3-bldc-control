@@ -1,0 +1,2 @@
+source /root/DSA/esp32-bldc-baremetal-contro/build/bootloader/gdbinit/symbols
+source /root/DSA/esp32-bldc-baremetal-contro/build/bootloader/gdbinit/connect

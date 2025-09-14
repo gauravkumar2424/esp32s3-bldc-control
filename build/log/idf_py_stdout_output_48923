@@ -1,0 +1,547 @@
+Command: /root/.espressif/python_env/idf5.5_py3.12_env/bin/python /root/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /root/DSA/esp32-bldc-baremetal-contro/build/esp32-bldc-baremetal-contro.elf /root/DSA/esp32-bldc-baremetal-contro/build/bootloader/bootloader.elf -m '/root/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/root/esp-idf/tools/idf.py'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x400490cc
+SPIWP:0xee
+Octal Flash Mode Enabled
+For OPI Flash, Use Default Flash Boot Mode
+mode:SLOW_RD, clock div:1
+load:0x3fce2820,len:0x159c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f48
+entry 0x403c8924
+[0;32mI (32) boot: ESP-IDF v5.5-1-gb66b5448e0 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Sep 14 2025 13:15:05[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (34) boot: chip revision: v0.1[0m
+[0;32mI (36) boot: efuse block revision: v1.2[0m
+[0;32mI (40) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (44) boot.esp32s3: SPI Mode       : SLOW READ[0m
+[0;32mI (48) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0a618h ( 42520) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001a640 vaddr=3fc92700 size=02ad8h ( 10968) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=0001d120 vaddr=40374000 size=02ef8h ( 12024) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1815ch ( 98652) map[0m
+[0;32mI (141) esp_image: segment 4: paddr=00038184 vaddr=40376ef8 size=0b748h ( 46920) load[0m
+[0;32mI (154) esp_image: segment 5: paddr=000438d4 vaddr=600fe000 size=00020h (    32) load[0m
+[0;32mI (161) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (161) boot: Disabling RNG early entropy source...[0m
+[0;32mI (172) cpu_start: Multicore app[0m
+[0;32mI (182) cpu_start: Pro cpu start user code[0m
+[0;32mI (182) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (182) app_init: Application information:[0m
+[0;32mI (182) app_init: Project name:     esp32-bldc-baremetal-contro[0m
+[0;32mI (187) app_init: App version:      1[0m
+[0;32mI (191) app_init: Compile time:     Sep 14 2025 13:14:58[0m
+[0;32mI (196) app_init: ELF file SHA256:  59b576d15...[0m
+[0;32mI (200) app_init: ESP-IDF:          v5.5-1-gb66b5448e0[0m
+[0;32mI (205) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (209) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (213) efuse_init: Chip rev:         v0.1[0m
+[0;32mI (217) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (223) heap_init: At 3FC95AB8 len 00053C58 (335 KiB): RAM[0m
+[0;32mI (228) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (233) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (238) heap_init: At 600FE020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;33mW (244) spi_flash: Octal flash chip is using but dio mode is selected, will automatically switch to Octal mode[0m
+[0;32mI (254) spi_flash: detected chip: mxic (opi)[0m
+[0;32mI (257) spi_flash: flash io: opi_str[0m
+[0;33mW (261) spi_flash: Detected size(32768k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (273) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (279) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (286) main_task: Started on CPU0[0m
+[0;32mI (296) main_task: Calling app_main()[0m
+[0;32mI (296) MAIN: Starting motor control loop![0m
+[0;32mI (296) ENCODER: Initialized simulated encoder[0m
+[0;32mI (296) STATE_MACHINE: Transitioned to RUN[0m
+[0;32mI (306) STATE_MACHINE: Running: Speed=400.50 Hz, Duty=8.01%[0m
+[0;32mI (316) STATE_MACHINE: Running: Speed=401.00 Hz, Duty=8.02%[0m
+[0;32mI (326) STATE_MACHINE: Running: Speed=401.50 Hz, Duty=8.03%[0m
+[0;32mI (336) STATE_MACHINE: Running: Speed=402.00 Hz, Duty=8.04%[0m
+[0;32mI (336) STATE_MACHINE: Running: Speed=402.50 Hz, Duty=8.05%[0m
+[0;32mI (346) STATE_MACHINE: Running: Speed=403.00 Hz, Duty=8.06%[0m
+[0;32mI (356) STATE_MACHINE: Running: Speed=403.50 Hz, Duty=8.07%[0m
+[0;32mI (366) STATE_MACHINE: Running: Speed=404.00 Hz, Duty=8.08%[0m
+[0;32mI (366) STATE_MACHINE: Running: Speed=404.50 Hz, Duty=8.09%[0m
+[0;32mI (376) STATE_MACHINE: Running: Speed=405.00 Hz, Duty=8.10%[0m
+[0;32mI (386) STATE_MACHINE: Running: Speed=405.50 Hz, Duty=8.11%[0m
+[0;32mI (396) STATE_MACHINE: Running: Speed=406.00 Hz, Duty=8.12%[0m
+[0;32mI (406) STATE_MACHINE: Running: Speed=406.50 Hz, Duty=8.13%[0m
+[0;32mI (406) STATE_MACHINE: Running: Speed=407.00 Hz, Duty=8.14%[0m
+[0;32mI (416) STATE_MACHINE: Running: Speed=407.50 Hz, Duty=8.15%[0m
+[0;32mI (426) STATE_MACHINE: Running: Speed=408.00 Hz, Duty=8.16%[0m
+[0;32mI (436) STATE_MACHINE: Running: Speed=408.50 Hz, Duty=8.17%[0m
+[0;32mI (436) STATE_MACHINE: Running: Speed=409.00 Hz, Duty=8.18%[0m
+[0;32mI (446) STATE_MACHINE: Running: Speed=409.50 Hz, Duty=8.19%[0m
+[0;32mI (456) STATE_MACHINE: Running: Speed=410.00 Hz, Duty=8.19%[0m
+[0;32mI (466) STATE_MACHINE: Running: Speed=410.50 Hz, Duty=8.20%[0m
+[0;32mI (466) STATE_MACHINE: Running: Speed=411.00 Hz, Duty=8.21%[0m
+[0;32mI (476) STATE_MACHINE: Running: Speed=411.50 Hz, Duty=8.22%[0m
+[0;32mI (486) STATE_MACHINE: Running: Speed=412.00 Hz, Duty=8.23%[0m
+[0;32mI (496) STATE_MACHINE: Running: Speed=412.50 Hz, Duty=8.24%[0m
+[0;32mI (506) STATE_MACHINE: Running: Speed=413.00 Hz, Duty=8.25%[0m
+[0;32mI (506) STATE_MACHINE: Running: Speed=413.50 Hz, Duty=8.26%[0m
+[0;32mI (516) STATE_MACHINE: Running: Speed=414.00 Hz, Duty=8.27%[0m
+[0;32mI (526) STATE_MACHINE: Running: Speed=414.50 Hz, Duty=8.28%[0m
+[0;32mI (536) STATE_MACHINE: Running: Speed=415.00 Hz, Duty=8.29%[0m
+[0;32mI (536) STATE_MACHINE: Running: Speed=415.50 Hz, Duty=8.30%[0m
+[0;32mI (546) STATE_MACHINE: Running: Speed=416.00 Hz, Duty=8.31%[0m
+[0;32mI (556) STATE_MACHINE: Running: Speed=416.50 Hz, Duty=8.32%[0m
+[0;32mI (566) STATE_MACHINE: Running: Speed=417.00 Hz, Duty=8.33%[0m
+[0;32mI (566) STATE_MACHINE: Running: Speed=417.50 Hz, Duty=8.33%[0m
+[0;32mI (576) STATE_MACHINE: Running: Speed=418.00 Hz, Duty=8.34%[0m
+[0;32mI (586) STATE_MACHINE: Running: Speed=418.50 Hz, Duty=8.35%[0m
+[0;32mI (596) STATE_MACHINE: Running: Speed=419.00 Hz, Duty=8.36%[0m
+[0;32mI (606) STATE_MACHINE: Running: Speed=419.50 Hz, Duty=8.37%[0m
+[0;32mI (606) STATE_MACHINE: Running: Speed=420.00 Hz, Duty=8.38%[0m
+[0;32mI (616) STATE_MACHINE: Running: Speed=420.50 Hz, Duty=8.39%[0m
+[0;32mI (626) STATE_MACHINE: Running: Speed=421.00 Hz, Duty=8.40%[0m
+[0;32mI (636) STATE_MACHINE: Running: Speed=421.50 Hz, Duty=8.41%[0m
+[0;32mI (636) STATE_MACHINE: Running: Speed=422.00 Hz, Duty=8.42%[0m
+[0;32mI (646) STATE_MACHINE: Running: Speed=422.50 Hz, Duty=8.42%[0m
+[0;32mI (656) STATE_MACHINE: Running: Speed=423.00 Hz, Duty=8.43%[0m
+[0;32mI (666) STATE_MACHINE: Running: Speed=423.50 Hz, Duty=8.44%[0m
+[0;32mI (676) STATE_MACHINE: Running: Speed=424.00 Hz, Duty=8.45%[0m
+[0;32mI (676) STATE_MACHINE: Running: Speed=424.50 Hz, Duty=8.46%[0m
+[0;32mI (686) STATE_MACHINE: Running: Speed=425.00 Hz, Duty=8.47%[0m
+[0;32mI (696) STATE_MACHINE: Running: Speed=425.50 Hz, Duty=8.48%[0m
+[0;32mI (706) STATE_MACHINE: Running: Speed=426.00 Hz, Duty=8.49%[0m
+[0;32mI (706) STATE_MACHINE: Running: Speed=426.50 Hz, Duty=8.49%[0m
+[0;32mI (716) STATE_MACHINE: Running: Speed=427.00 Hz, Duty=8.50%[0m
+[0;32mI (726) STATE_MACHINE: Running: Speed=427.50 Hz, Duty=8.51%[0m
+[0;32mI (736) STATE_MACHINE: Running: Speed=428.00 Hz, Duty=8.52%[0m
+[0;32mI (736) STATE_MACHINE: Running: Speed=428.50 Hz, Duty=8.53%[0m
+[0;32mI (746) STATE_MACHINE: Running: Speed=429.00 Hz, Duty=8.54%[0m
+[0;32mI (756) STATE_MACHINE: Running: Speed=429.50 Hz, Duty=8.55%[0m
+[0;32mI (766) STATE_MACHINE: Running: Speed=430.00 Hz, Duty=8.55%[0m
+[0;32mI (776) STATE_MACHINE: Running: Speed=430.50 Hz, Duty=8.56%[0m
+[0;32mI (776) STATE_MACHINE: Running: Speed=431.00 Hz, Duty=8.57%[0m
+[0;32mI (786) STATE_MACHINE: Running: Speed=431.50 Hz, Duty=8.58%[0m
+[0;32mI (796) STATE_MACHINE: Running: Speed=432.00 Hz, Duty=8.59%[0m
+[0;32mI (806) STATE_MACHINE: Running: Speed=432.50 Hz, Duty=8.60%[0m
+[0;32mI (806) STATE_MACHINE: Running: Speed=433.00 Hz, Duty=8.60%[0m
+[0;32mI (816) STATE_MACHINE: Running: Speed=433.50 Hz, Duty=8.61%[0m
+[0;32mI (826) STATE_MACHINE: Running: Speed=434.00 Hz, Duty=8.62%[0m
+[0;32mI (836) STATE_MACHINE: Running: Speed=434.50 Hz, Duty=8.63%[0m
+[0;32mI (836) STATE_MACHINE: Running: Speed=435.00 Hz, Duty=8.64%[0m
+[0;32mI (846) STATE_MACHINE: Running: Speed=435.50 Hz, Duty=8.65%[0m
+[0;32mI (856) STATE_MACHINE: Running: Speed=436.00 Hz, Duty=8.65%[0m
+[0;32mI (866) STATE_MACHINE: Running: Speed=436.50 Hz, Duty=8.66%[0m
+[0;32mI (876) STATE_MACHINE: Running: Speed=437.00 Hz, Duty=8.67%[0m
+[0;32mI (876) STATE_MACHINE: Running: Speed=437.50 Hz, Duty=8.68%[0m
+[0;32mI (886) STATE_MACHINE: Running: Speed=438.00 Hz, Duty=8.69%[0m
+[0;32mI (896) STATE_MACHINE: Running: Speed=438.50 Hz, Duty=8.69%[0m
+[0;32mI (906) STATE_MACHINE: Running: Speed=439.00 Hz, Duty=8.70%[0m
+[0;32mI (906) STATE_MACHINE: Running: Speed=439.50 Hz, Duty=8.71%[0m
+[0;32mI (916) STATE_MACHINE: Running: Speed=440.00 Hz, Duty=8.72%[0m
+[0;32mI (926) STATE_MACHINE: Running: Speed=440.50 Hz, Duty=8.73%[0m
+[0;32mI (936) STATE_MACHINE: Running: Speed=441.00 Hz, Duty=8.73%[0m
+[0;32mI (936) STATE_MACHINE: Running: Speed=441.50 Hz, Duty=8.74%[0m
+[0;32mI (946) STATE_MACHINE: Running: Speed=442.00 Hz, Duty=8.75%[0m
+[0;32mI (956) STATE_MACHINE: Running: Speed=442.50 Hz, Duty=8.76%[0m
+[0;32mI (966) STATE_MACHINE: Running: Speed=443.00 Hz, Duty=8.77%[0m
+[0;32mI (976) STATE_MACHINE: Running: Speed=443.50 Hz, Duty=8.77%[0m
+[0;32mI (976) STATE_MACHINE: Running: Speed=444.00 Hz, Duty=8.78%[0m
+[0;32mI (986) STATE_MACHINE: Running: Speed=444.50 Hz, Duty=8.79%[0m
+[0;32mI (996) STATE_MACHINE: Running: Speed=445.00 Hz, Duty=8.80%[0m
+[0;32mI (1006) STATE_MACHINE: Running: Speed=445.50 Hz, Duty=8.81%[0m
+[0;32mI (1006) STATE_MACHINE: Running: Speed=446.00 Hz, Duty=8.81%[0m
+[0;32mI (1016) STATE_MACHINE: Running: Speed=446.50 Hz, Duty=8.82%[0m
+[0;32mI (1026) STATE_MACHINE: Running: Speed=447.00 Hz, Duty=8.83%[0m
+[0;32mI (1036) STATE_MACHINE: Running: Speed=447.50 Hz, Duty=8.84%[0m
+[0;32mI (1036) STATE_MACHINE: Running: Speed=448.00 Hz, Duty=8.84%[0m
+[0;32mI (1046) STATE_MACHINE: Running: Speed=448.50 Hz, Duty=8.85%[0m
+[0;32mI (1056) STATE_MACHINE: Running: Speed=449.00 Hz, Duty=8.86%[0m
+[0;32mI (1066) STATE_MACHINE: Running: Speed=449.50 Hz, Duty=8.87%[0m
+[0;32mI (1076) STATE_MACHINE: Running: Speed=450.00 Hz, Duty=8.87%[0m
+[0;32mI (1076) STATE_MACHINE: Running: Speed=450.50 Hz, Duty=8.88%[0m
+[0;32mI (1086) STATE_MACHINE: Running: Speed=451.00 Hz, Duty=8.89%[0m
+[0;32mI (1096) STATE_MACHINE: Running: Speed=451.50 Hz, Duty=8.90%[0m
+[0;32mI (1106) STATE_MACHINE: Running: Speed=452.00 Hz, Duty=8.90%[0m
+[0;32mI (1106) STATE_MACHINE: Running: Speed=452.50 Hz, Duty=8.91%[0m
+[0;32mI (1116) STATE_MACHINE: Running: Speed=453.00 Hz, Duty=8.92%[0m
+[0;32mI (1126) STATE_MACHINE: Running: Speed=453.50 Hz, Duty=8.93%[0m
+[0;32mI (1136) STATE_MACHINE: Running: Speed=454.00 Hz, Duty=8.93%[0m
+[0;32mI (1136) STATE_MACHINE: Running: Speed=454.50 Hz, Duty=8.94%[0m
+[0;32mI (1146) STATE_MACHINE: Running: Speed=455.00 Hz, Duty=8.95%[0m
+[0;32mI (1156) STATE_MACHINE: Running: Speed=455.50 Hz, Duty=8.95%[0m
+[0;32mI (1166) STATE_MACHINE: Running: Speed=456.00 Hz, Duty=8.96%[0m
+[0;32mI (1176) STATE_MACHINE: Running: Speed=456.50 Hz, Duty=8.97%[0m
+[0;32mI (1176) STATE_MACHINE: Running: Speed=457.00 Hz, Duty=8.98%[0m
+[0;32mI (1186) STATE_MACHINE: Running: Speed=457.50 Hz, Duty=8.98%[0m
+[0;32mI (1196) STATE_MACHINE: Running: Speed=458.00 Hz, Duty=8.99%[0m
+[0;32mI (1206) STATE_MACHINE: Running: Speed=458.50 Hz, Duty=9.00%[0m
+[0;32mI (1206) STATE_MACHINE: Running: Speed=459.00 Hz, Duty=9.00%[0m
+[0;32mI (1216) STATE_MACHINE: Running: Speed=459.50 Hz, Duty=9.01%[0m
+[0;32mI (1226) STATE_MACHINE: Running: Speed=460.00 Hz, Duty=9.02%[0m
+[0;32mI (1236) STATE_MACHINE: Running: Speed=460.50 Hz, Duty=9.03%[0m
+[0;32mI (1236) STATE_MACHINE: Running: Speed=461.00 Hz, Duty=9.03%[0m
+[0;32mI (1246) STATE_MACHINE: Running: Speed=461.50 Hz, Duty=9.04%[0m
+[0;32mI (1256) STATE_MACHINE: Running: Speed=462.00 Hz, Duty=9.05%[0m
+[0;32mI (1266) STATE_MACHINE: Running: Speed=462.50 Hz, Duty=9.05%[0m
+[0;32mI (1276) STATE_MACHINE: Running: Speed=463.00 Hz, Duty=9.06%[0m
+[0;32mI (1276) STATE_MACHINE: Running: Speed=463.50 Hz, Duty=9.07%[0m
+[0;32mI (1286) STATE_MACHINE: Running: Speed=464.00 Hz, Duty=9.07%[0m
+[0;32mI (1296) STATE_MACHINE: Running: Speed=464.50 Hz, Duty=9.08%[0m
+[0;32mI (1306) STATE_MACHINE: Running: Speed=465.00 Hz, Duty=9.09%[0m
+[0;32mI (1306) STATE_MACHINE: Running: Speed=465.50 Hz, Duty=9.09%[0m
+[0;32mI (1316) STATE_MACHINE: Running: Speed=466.00 Hz, Duty=9.10%[0m
+[0;32mI (1326) STATE_MACHINE: Running: Speed=466.50 Hz, Duty=9.11%[0m
+[0;32mI (1336) STATE_MACHINE: Running: Speed=467.00 Hz, Duty=9.11%[0m
+[0;32mI (1346) STATE_MACHINE: Running: Speed=467.50 Hz, Duty=9.12%[0m
+[0;32mI (1346) STATE_MACHINE: Running: Speed=468.00 Hz, Duty=9.13%[0m
+[0;32mI (1356) STATE_MACHINE: Running: Speed=468.50 Hz, Duty=9.13%[0m
+[0;32mI (1366) STATE_MACHINE: Running: Speed=469.00 Hz, Duty=9.14%[0m
+[0;32mI (1376) STATE_MACHINE: Running: Speed=469.50 Hz, Duty=9.15%[0m
+[0;32mI (1376) STATE_MACHINE: Running: Speed=470.00 Hz, Duty=9.15%[0m
+[0;32mI (1386) STATE_MACHINE: Running: Speed=470.50 Hz, Duty=9.16%[0m
+[0;32mI (1396) STATE_MACHINE: Running: Speed=471.00 Hz, Duty=9.17%[0m
+[0;32mI (1406) STATE_MACHINE: Running: Speed=471.50 Hz, Duty=9.17%[0m
+[0;32mI (1406) STATE_MACHINE: Running: Speed=472.00 Hz, Duty=9.18%[0m
+[0;32mI (1416) STATE_MACHINE: Running: Speed=472.50 Hz, Duty=9.19%[0m
+[0;32mI (1426) STATE_MACHINE: Running: Speed=473.00 Hz, Duty=9.19%[0m
+[0;32mI (1436) STATE_MACHINE: Running: Speed=473.50 Hz, Duty=9.20%[0m
+[0;32mI (1446) STATE_MACHINE: Running: Speed=474.00 Hz, Duty=9.20%[0m
+[0;32mI (1446) STATE_MACHINE: Running: Speed=474.50 Hz, Duty=9.21%[0m
+[0;32mI (1456) STATE_MACHINE: Running: Speed=475.00 Hz, Duty=9.22%[0m
+[0;32mI (1466) STATE_MACHINE: Running: Speed=475.50 Hz, Duty=9.22%[0m
+[0;32mI (1476) STATE_MACHINE: Running: Speed=476.00 Hz, Duty=9.23%[0m
+[0;32mI (1476) STATE_MACHINE: Running: Speed=476.50 Hz, Duty=9.24%[0m
+[0;32mI (1486) STATE_MACHINE: Running: Speed=477.00 Hz, Duty=9.24%[0m
+[0;32mI (1496) STATE_MACHINE: Running: Speed=477.50 Hz, Duty=9.25%[0m
+[0;32mI (1506) STATE_MACHINE: Running: Speed=478.00 Hz, Duty=9.25%[0m
+[0;32mI (1506) STATE_MACHINE: Running: Speed=478.50 Hz, Duty=9.26%[0m
+[0;32mI (1516) STATE_MACHINE: Running: Speed=479.00 Hz, Duty=9.27%[0m
+[0;32mI (1526) STATE_MACHINE: Running: Speed=479.50 Hz, Duty=9.27%[0m
+[0;32mI (1536) STATE_MACHINE: Running: Speed=480.00 Hz, Duty=9.28%[0m
+[0;32mI (1546) STATE_MACHINE: Running: Speed=480.50 Hz, Duty=9.28%[0m
+[0;32mI (1546) STATE_MACHINE: Running: Speed=481.00 Hz, Duty=9.29%[0m
+[0;32mI (1556) STATE_MACHINE: Running: Speed=481.50 Hz, Duty=9.30%[0m
+[0;32mI (1566) STATE_MACHINE: Running: Speed=482.00 Hz, Duty=9.30%[0m
+[0;32mI (1576) STATE_MACHINE: Running: Speed=482.50 Hz, Duty=9.31%[0m
+[0;32mI (1576) STATE_MACHINE: Running: Speed=483.00 Hz, Duty=9.31%[0m
+[0;32mI (1586) STATE_MACHINE: Running: Speed=483.50 Hz, Duty=9.32%[0m
+[0;32mI (1596) STATE_MACHINE: Running: Speed=484.00 Hz, Duty=9.33%[0m
+[0;32mI (1606) STATE_MACHINE: Running: Speed=484.50 Hz, Duty=9.33%[0m
+[0;32mI (1606) STATE_MACHINE: Running: Speed=485.00 Hz, Duty=9.34%[0m
+[0;32mI (1616) STATE_MACHINE: Running: Speed=485.50 Hz, Duty=9.34%[0m
+[0;32mI (1626) STATE_MACHINE: Running: Speed=486.00 Hz, Duty=9.35%[0m
+[0;32mI (1636) STATE_MACHINE: Running: Speed=486.50 Hz, Duty=9.35%[0m
+[0;32mI (1646) STATE_MACHINE: Running: Speed=487.00 Hz, Duty=9.36%[0m
+[0;32mI (1646) STATE_MACHINE: Running: Speed=487.50 Hz, Duty=9.36%[0m
+[0;32mI (1656) STATE_MACHINE: Running: Speed=488.00 Hz, Duty=9.37%[0m
+[0;32mI (1666) STATE_MACHINE: Running: Speed=488.50 Hz, Duty=9.38%[0m
+[0;32mI (1676) STATE_MACHINE: Running: Speed=489.00 Hz, Duty=9.38%[0m
+[0;32mI (1676) STATE_MACHINE: Running: Speed=489.50 Hz, Duty=9.39%[0m
+[0;32mI (1686) STATE_MACHINE: Running: Speed=490.00 Hz, Duty=9.39%[0m
+[0;32mI (1696) STATE_MACHINE: Running: Speed=490.50 Hz, Duty=9.40%[0m
+[0;32mI (1706) STATE_MACHINE: Running: Speed=491.00 Hz, Duty=9.40%[0m
+[0;32mI (1706) STATE_MACHINE: Running: Speed=491.50 Hz, Duty=9.41%[0m
+[0;32mI (1716) STATE_MACHINE: Running: Speed=492.00 Hz, Duty=9.41%[0m
+[0;32mI (1726) STATE_MACHINE: Running: Speed=492.50 Hz, Duty=9.42%[0m
+[0;32mI (1736) STATE_MACHINE: Running: Speed=493.00 Hz, Duty=9.43%[0m
+[0;32mI (1746) STATE_MACHINE: Running: Speed=493.50 Hz, Duty=9.43%[0m
+[0;32mI (1746) STATE_MACHINE: Running: Speed=494.00 Hz, Duty=9.44%[0m
+[0;32mI (1756) STATE_MACHINE: Running: Speed=494.50 Hz, Duty=9.44%[0m
+[0;32mI (1766) STATE_MACHINE: Running: Speed=495.00 Hz, Duty=9.45%[0m
+[0;32mI (1776) STATE_MACHINE: Running: Speed=495.50 Hz, Duty=9.45%[0m
+[0;32mI (1776) STATE_MACHINE: Running: Speed=496.00 Hz, Duty=9.46%[0m
+[0;32mI (1786) STATE_MACHINE: Running: Speed=496.50 Hz, Duty=9.46%[0m
+[0;32mI (1796) STATE_MACHINE: Running: Speed=497.00 Hz, Duty=9.47%[0m
+[0;32mI (1806) STATE_MACHINE: Running: Speed=497.50 Hz, Duty=9.47%[0m
+[0;32mI (1806) STATE_MACHINE: Running: Speed=498.00 Hz, Duty=9.48%[0m
+[0;32mI (1816) STATE_MACHINE: Running: Speed=498.50 Hz, Duty=9.48%[0m
+[0;32mI (1826) STATE_MACHINE: Running: Speed=499.00 Hz, Duty=9.49%[0m
+[0;32mI (1836) STATE_MACHINE: Running: Speed=499.50 Hz, Duty=9.49%[0m
+[0;32mI (1846) STATE_MACHINE: Running: Speed=500.00 Hz, Duty=9.50%[0m
+[0;32mI (1846) STATE_MACHINE: Running: Speed=500.50 Hz, Duty=9.50%[0m
+[0;32mI (1856) STATE_MACHINE: Running: Speed=501.00 Hz, Duty=9.51%[0m
+[0;32mI (1866) STATE_MACHINE: Running: Speed=501.50 Hz, Duty=9.51%[0m
+[0;32mI (1876) STATE_MACHINE: Running: Speed=502.00 Hz, Duty=9.52%[0m
+[0;32mI (1876) STATE_MACHINE: Running: Speed=502.50 Hz, Duty=9.52%[0m
+[0;32mI (1886) STATE_MACHINE: Running: Speed=503.00 Hz, Duty=9.53%[0m
+[0;32mI (1896) STATE_MACHINE: Running: Speed=503.50 Hz, Duty=9.53%[0m
+[0;32mI (1906) STATE_MACHINE: Running: Speed=504.00 Hz, Duty=9.54%[0m
+[0;32mI (1916) STATE_MACHINE: Running: Speed=504.50 Hz, Duty=9.54%[0m
+[0;32mI (1916) STATE_MACHINE: Running: Speed=505.00 Hz, Duty=9.55%[0m
+[0;32mI (1926) STATE_MACHINE: Running: Speed=505.50 Hz, Duty=9.55%[0m
+[0;32mI (1936) STATE_MACHINE: Running: Speed=506.00 Hz, Duty=9.56%[0m
+[0;32mI (1946) STATE_MACHINE: Running: Speed=506.50 Hz, Duty=9.56%[0m
+[0;32mI (1946) STATE_MACHINE: Running: Speed=507.00 Hz, Duty=9.56%[0m
+[0;32mI (1956) STATE_MACHINE: Running: Speed=507.50 Hz, Duty=9.57%[0m
+[0;32mI (1966) STATE_MACHINE: Running: Speed=508.00 Hz, Duty=9.57%[0m
+[0;32mI (1976) STATE_MACHINE: Running: Speed=508.50 Hz, Duty=9.58%[0m
+[0;32mI (1976) STATE_MACHINE: Running: Speed=509.00 Hz, Duty=9.58%[0m
+[0;32mI (1986) STATE_MACHINE: Running: Speed=509.50 Hz, Duty=9.59%[0m
+[0;32mI (1996) STATE_MACHINE: Running: Speed=510.00 Hz, Duty=9.59%[0m
+[0;32mI (2006) STATE_MACHINE: Running: Speed=510.50 Hz, Duty=9.60%[0m
+[0;32mI (2016) STATE_MACHINE: Running: Speed=511.00 Hz, Duty=9.60%[0m
+[0;32mI (2016) STATE_MACHINE: Running: Speed=511.50 Hz, Duty=9.61%[0m
+[0;32mI (2026) STATE_MACHINE: Running: Speed=512.00 Hz, Duty=9.61%[0m
+[0;32mI (2036) STATE_MACHINE: Running: Speed=512.50 Hz, Duty=9.61%[0m
+[0;32mI (2046) STATE_MACHINE: Running: Speed=513.00 Hz, Duty=9.62%[0m
+[0;32mI (2046) STATE_MACHINE: Running: Speed=513.50 Hz, Duty=9.62%[0m
+[0;32mI (2056) STATE_MACHINE: Running: Speed=514.00 Hz, Duty=9.63%[0m
+[0;32mI (2066) STATE_MACHINE: Running: Speed=514.50 Hz, Duty=9.63%[0m
+[0;32mI (2076) STATE_MACHINE: Running: Speed=515.00 Hz, Duty=9.64%[0m
+[0;32mI (2076) STATE_MACHINE: Running: Speed=515.50 Hz, Duty=9.64%[0m
+[0;32mI (2086) STATE_MACHINE: Running: Speed=516.00 Hz, Duty=9.64%[0m
+[0;32mI (2096) STATE_MACHINE: Running: Speed=516.50 Hz, Duty=9.65%[0m
+[0;32mI (2106) STATE_MACHINE: Running: Speed=517.00 Hz, Duty=9.65%[0m
+[0;32mI (2116) STATE_MACHINE: Running: Speed=517.50 Hz, Duty=9.66%[0m
+[0;32mI (2116) STATE_MACHINE: Running: Speed=518.00 Hz, Duty=9.66%[0m
+[0;32mI (2126) STATE_MACHINE: Running: Speed=518.50 Hz, Duty=9.66%[0m
+[0;32mI (2136) STATE_MACHINE: Running: Speed=519.00 Hz, Duty=9.67%[0m
+[0;32mI (2146) STATE_MACHINE: Running: Speed=519.50 Hz, Duty=9.67%[0m
+[0;32mI (2146) STATE_MACHINE: Running: Speed=520.00 Hz, Duty=9.68%[0m
+[0;32mI (2156) STATE_MACHINE: Running: Speed=520.50 Hz, Duty=9.68%[0m
+[0;32mI (2166) STATE_MACHINE: Running: Speed=521.00 Hz, Duty=9.68%[0m
+[0;32mI (2176) STATE_MACHINE: Running: Speed=521.50 Hz, Duty=9.69%[0m
+[0;32mI (2176) STATE_MACHINE: Running: Speed=522.00 Hz, Duty=9.69%[0m
+[0;32mI (2186) STATE_MACHINE: Running: Speed=522.50 Hz, Duty=9.70%[0m
+[0;32mI (2196) STATE_MACHINE: Running: Speed=523.00 Hz, Duty=9.70%[0m
+[0;32mI (2206) STATE_MACHINE: Running: Speed=523.50 Hz, Duty=9.70%[0m
+[0;32mI (2216) STATE_MACHINE: Running: Speed=524.00 Hz, Duty=9.71%[0m
+[0;32mI (2216) STATE_MACHINE: Running: Speed=524.50 Hz, Duty=9.71%[0m
+[0;32mI (2226) STATE_MACHINE: Running: Speed=525.00 Hz, Duty=9.72%[0m
+[0;32mI (2236) STATE_MACHINE: Running: Speed=525.50 Hz, Duty=9.72%[0m
+[0;32mI (2246) STATE_MACHINE: Running: Speed=526.00 Hz, Duty=9.72%[0m
+[0;32mI (2246) STATE_MACHINE: Running: Speed=526.50 Hz, Duty=9.73%[0m
+[0;32mI (2256) STATE_MACHINE: Running: Speed=527.00 Hz, Duty=9.73%[0m
+[0;32mI (2266) STATE_MACHINE: Running: Speed=527.50 Hz, Duty=9.73%[0m
+[0;32mI (2276) STATE_MACHINE: Running: Speed=528.00 Hz, Duty=9.74%[0m
+[0;32mI (2276) STATE_MACHINE: Running: Speed=528.50 Hz, Duty=9.74%[0m
+[0;32mI (2286) STATE_MACHINE: Running: Speed=529.00 Hz, Duty=9.74%[0m
+[0;32mI (2296) STATE_MACHINE: Running: Speed=529.50 Hz, Duty=9.75%[0m
+[0;32mI (2306) STATE_MACHINE: Running: Speed=530.00 Hz, Duty=9.75%[0m
+[0;32mI (2316) STATE_MACHINE: Running: Speed=530.50 Hz, Duty=9.76%[0m
+[0;32mI (2316) STATE_MACHINE: Running: Speed=531.00 Hz, Duty=9.76%[0m
+[0;32mI (2326) STATE_MACHINE: Running: Speed=531.50 Hz, Duty=9.76%[0m
+[0;32mI (2336) STATE_MACHINE: Running: Speed=532.00 Hz, Duty=9.77%[0m
+[0;32mI (2346) STATE_MACHINE: Running: Speed=532.50 Hz, Duty=9.77%[0m
+[0;32mI (2346) STATE_MACHINE: Running: Speed=533.00 Hz, Duty=9.77%[0m
+[0;32mI (2356) STATE_MACHINE: Running: Speed=533.50 Hz, Duty=9.78%[0m
+[0;32mI (2366) STATE_MACHINE: Running: Speed=534.00 Hz, Duty=9.78%[0m
+[0;32mI (2376) STATE_MACHINE: Running: Speed=534.50 Hz, Duty=9.78%[0m
+[0;32mI (2376) STATE_MACHINE: Running: Speed=535.00 Hz, Duty=9.79%[0m
+[0;32mI (2386) STATE_MACHINE: Running: Speed=535.50 Hz, Duty=9.79%[0m
+[0;32mI (2396) STATE_MACHINE: Running: Speed=536.00 Hz, Duty=9.79%[0m
+[0;32mI (2406) STATE_MACHINE: Running: Speed=536.50 Hz, Duty=9.79%[0m
+[0;32mI (2416) STATE_MACHINE: Running: Speed=537.00 Hz, Duty=9.80%[0m
+[0;32mI (2416) STATE_MACHINE: Running: Speed=537.50 Hz, Duty=9.80%[0m
+[0;32mI (2426) STATE_MACHINE: Running: Speed=538.00 Hz, Duty=9.80%[0m
+[0;32mI (2436) STATE_MACHINE: Running: Speed=538.50 Hz, Duty=9.81%[0m
+[0;32mI (2446) STATE_MACHINE: Running: Speed=539.00 Hz, Duty=9.81%[0m
+[0;32mI (2446) STATE_MACHINE: Running: Speed=539.50 Hz, Duty=9.81%[0m
+[0;32mI (2456) STATE_MACHINE: Running: Speed=540.00 Hz, Duty=9.82%[0m
+[0;32mI (2466) STATE_MACHINE: Running: Speed=540.50 Hz, Duty=9.82%[0m
+[0;32mI (2476) STATE_MACHINE: Running: Speed=541.00 Hz, Duty=9.82%[0m
+[0;32mI (2486) STATE_MACHINE: Running: Speed=541.50 Hz, Duty=9.83%[0m
+[0;32mI (2486) STATE_MACHINE: Running: Speed=542.00 Hz, Duty=9.83%[0m
+[0;32mI (2496) STATE_MACHINE: Running: Speed=542.50 Hz, Duty=9.83%[0m
+[0;32mI (2506) STATE_MACHINE: Running: Speed=543.00 Hz, Duty=9.83%[0m
+[0;32mI (2516) STATE_MACHINE: Running: Speed=543.50 Hz, Duty=9.84%[0m
+[0;32mI (2516) STATE_MACHINE: Running: Speed=544.00 Hz, Duty=9.84%[0m
+[0;32mI (2526) STATE_MACHINE: Running: Speed=544.50 Hz, Duty=9.84%[0m
+[0;32mI (2536) STATE_MACHINE: Running: Speed=545.00 Hz, Duty=9.85%[0m
+[0;32mI (2546) STATE_MACHINE: Running: Speed=545.50 Hz, Duty=9.85%[0m
+[0;32mI (2546) STATE_MACHINE: Running: Speed=546.00 Hz, Duty=9.85%[0m
+[0;32mI (2556) STATE_MACHINE: Running: Speed=546.50 Hz, Duty=9.85%[0m
+[0;32mI (2566) STATE_MACHINE: Running: Speed=547.00 Hz, Duty=9.86%[0m
+[0;32mI (2576) STATE_MACHINE: Running: Speed=547.50 Hz, Duty=9.86%[0m
+[0;32mI (2586) STATE_MACHINE: Running: Speed=548.00 Hz, Duty=9.86%[0m
+[0;32mI (2586) STATE_MACHINE: Running: Speed=548.50 Hz, Duty=9.86%[0m
+[0;32mI (2596) STATE_MACHINE: Running: Speed=549.00 Hz, Duty=9.87%[0m
+[0;32mI (2606) STATE_MACHINE: Running: Speed=549.50 Hz, Duty=9.87%[0m
+[0;32mI (2616) STATE_MACHINE: Running: Speed=550.00 Hz, Duty=9.87%[0m
+[0;32mI (2616) STATE_MACHINE: Running: Speed=550.50 Hz, Duty=9.87%[0m
+[0;32mI (2626) STATE_MACHINE: Running: Speed=551.00 Hz, Duty=9.88%[0m
+[0;32mI (2636) STATE_MACHINE: Running: Speed=551.50 Hz, Duty=9.88%[0m
+[0;32mI (2646) STATE_MACHINE: Running: Speed=552.00 Hz, Duty=9.88%[0m
+[0;32mI (2646) STATE_MACHINE: Running: Speed=552.50 Hz, Duty=9.88%[0m
+[0;32mI (2656) STATE_MACHINE: Running: Speed=553.00 Hz, Duty=9.89%[0m
+[0;32mI (2666) STATE_MACHINE: Running: Speed=553.50 Hz, Duty=9.89%[0m
+[0;32mI (2676) STATE_MACHINE: Running: Speed=554.00 Hz, Duty=9.89%[0m
+[0;32mI (2686) STATE_MACHINE: Running: Speed=554.50 Hz, Duty=9.89%[0m
+[0;32mI (2686) STATE_MACHINE: Running: Speed=555.00 Hz, Duty=9.89%[0m
+[0;32mI (2696) STATE_MACHINE: Running: Speed=555.50 Hz, Duty=9.90%[0m
+[0;32mI (2706) STATE_MACHINE: Running: Speed=556.00 Hz, Duty=9.90%[0m
+[0;32mI (2716) STATE_MACHINE: Running: Speed=556.50 Hz, Duty=9.90%[0m
+[0;32mI (2716) STATE_MACHINE: Running: Speed=557.00 Hz, Duty=9.90%[0m
+[0;32mI (2726) STATE_MACHINE: Running: Speed=557.50 Hz, Duty=9.91%[0m
+[0;32mI (2736) STATE_MACHINE: Running: Speed=558.00 Hz, Duty=9.91%[0m
+[0;32mI (2746) STATE_MACHINE: Running: Speed=558.50 Hz, Duty=9.91%[0m
+[0;32mI (2746) STATE_MACHINE: Running: Speed=559.00 Hz, Duty=9.91%[0m
+[0;32mI (2756) STATE_MACHINE: Running: Speed=559.50 Hz, Duty=9.91%[0m
+[0;32mI (2766) STATE_MACHINE: Running: Speed=560.00 Hz, Duty=9.92%[0m
+[0;32mI (2776) STATE_MACHINE: Running: Speed=560.50 Hz, Duty=9.92%[0m
+[0;32mI (2786) STATE_MACHINE: Running: Speed=561.00 Hz, Duty=9.92%[0m
+[0;32mI (2786) STATE_MACHINE: Running: Speed=561.50 Hz, Duty=9.92%[0m
+[0;32mI (2796) STATE_MACHINE: Running: Speed=562.00 Hz, Duty=9.92%[0m
+[0;32mI (2806) STATE_MACHINE: Running: Speed=562.50 Hz, Duty=9.93%[0m
+[0;32mI (2816) STATE_MACHINE: Running: Speed=563.00 Hz, Duty=9.93%[0m
+[0;32mI (2816) STATE_MACHINE: Running: Speed=563.50 Hz, Duty=9.93%[0m
+[0;32mI (2826) STATE_MACHINE: Running: Speed=564.00 Hz, Duty=9.93%[0m
+[0;32mI (2836) STATE_MACHINE: Running: Speed=564.50 Hz, Duty=9.93%[0m
+[0;32mI (2846) STATE_MACHINE: Running: Speed=565.00 Hz, Duty=9.93%[0m
+[0;32mI (2846) STATE_MACHINE: Running: Speed=565.50 Hz, Duty=9.94%[0m
+[0;32mI (2856) STATE_MACHINE: Running: Speed=566.00 Hz, Duty=9.94%[0m
+[0;32mI (2866) STATE_MACHINE: Running: Speed=566.50 Hz, Duty=9.94%[0m
+[0;32mI (2876) STATE_MACHINE: Running: Speed=567.00 Hz, Duty=9.94%[0m
+[0;32mI (2886) STATE_MACHINE: Running: Speed=567.50 Hz, Duty=9.94%[0m
+[0;32mI (2886) STATE_MACHINE: Running: Speed=568.00 Hz, Duty=9.94%[0m
+[0;32mI (2896) STATE_MACHINE: Running: Speed=568.50 Hz, Duty=9.95%[0m
+[0;32mI (2906) STATE_MACHINE: Running: Speed=569.00 Hz, Duty=9.95%[0m
+[0;32mI (2916) STATE_MACHINE: Running: Speed=569.50 Hz, Duty=9.95%[0m
+[0;32mI (2916) STATE_MACHINE: Running: Speed=570.00 Hz, Duty=9.95%[0m
+[0;32mI (2926) STATE_MACHINE: Running: Speed=570.50 Hz, Duty=9.95%[0m
+[0;32mI (2936) STATE_MACHINE: Running: Speed=571.00 Hz, Duty=9.95%[0m
+[0;32mI (2946) STATE_MACHINE: Running: Speed=571.50 Hz, Duty=9.96%[0m
+[0;32mI (2946) STATE_MACHINE: Running: Speed=572.00 Hz, Duty=9.96%[0m
+[0;32mI (2956) STATE_MACHINE: Running: Speed=572.50 Hz, Duty=9.96%[0m
+[0;32mI (2966) STATE_MACHINE: Running: Speed=573.00 Hz, Duty=9.96%[0m
+[0;32mI (2976) STATE_MACHINE: Running: Speed=573.50 Hz, Duty=9.96%[0m
+[0;32mI (2986) STATE_MACHINE: Running: Speed=574.00 Hz, Duty=9.96%[0m
+[0;32mI (2986) STATE_MACHINE: Running: Speed=574.50 Hz, Duty=9.96%[0m
+[0;32mI (2996) STATE_MACHINE: Running: Speed=575.00 Hz, Duty=9.96%[0m
+[0;32mI (3006) STATE_MACHINE: Running: Speed=575.50 Hz, Duty=9.97%[0m
+[0;32mI (3016) STATE_MACHINE: Running: Speed=576.00 Hz, Duty=9.97%[0m
+[0;32mI (3016) STATE_MACHINE: Running: Speed=576.50 Hz, Duty=9.97%[0m
+[0;32mI (3026) STATE_MACHINE: Running: Speed=577.00 Hz, Duty=9.97%[0m
+[0;32mI (3036) STATE_MACHINE: Running: Speed=577.50 Hz, Duty=9.97%[0m
+[0;32mI (3046) STATE_MACHINE: Running: Speed=578.00 Hz, Duty=9.97%[0m
+[0;32mI (3056) STATE_MACHINE: Running: Speed=578.50 Hz, Duty=9.97%[0m
+[0;32mI (3056) STATE_MACHINE: Running: Speed=579.00 Hz, Duty=9.97%[0m
+[0;32mI (3066) STATE_MACHINE: Running: Speed=579.50 Hz, Duty=9.97%[0m
+[0;32mI (3076) STATE_MACHINE: Running: Speed=580.00 Hz, Duty=9.98%[0m
+[0;32mI (3086) STATE_MACHINE: Running: Speed=580.50 Hz, Duty=9.98%[0m
+[0;32mI (3086) STATE_MACHINE: Running: Speed=581.00 Hz, Duty=9.98%[0m
+[0;32mI (3096) STATE_MACHINE: Running: Speed=581.50 Hz, Duty=9.98%[0m
+[0;32mI (3106) STATE_MACHINE: Running: Speed=582.00 Hz, Duty=9.98%[0m
+[0;32mI (3116) STATE_MACHINE: Running: Speed=582.50 Hz, Duty=9.98%[0m
+[0;32mI (3116) STATE_MACHINE: Running: Speed=583.00 Hz, Duty=9.98%[0m
+[0;32mI (3126) STATE_MACHINE: Running: Speed=583.50 Hz, Duty=9.98%[0m
+[0;32mI (3136) STATE_MACHINE: Running: Speed=584.00 Hz, Duty=9.98%[0m
+[0;32mI (3146) STATE_MACHINE: Running: Speed=584.50 Hz, Duty=9.98%[0m
+[0;32mI (3156) STATE_MACHINE: Running: Speed=585.00 Hz, Duty=9.98%[0m
+[0;32mI (3156) STATE_MACHINE: Running: Speed=585.50 Hz, Duty=9.98%[0m
+[0;32mI (3166) STATE_MACHINE: Running: Speed=586.00 Hz, Duty=9.99%[0m
+[0;32mI (3176) STATE_MACHINE: Running: Speed=586.50 Hz, Duty=9.99%[0m
+[0;32mI (3186) STATE_MACHINE: Running: Speed=587.00 Hz, Duty=9.99%[0m
+[0;32mI (3186) STATE_MACHINE: Running: Speed=587.50 Hz, Duty=9.99%[0m
+[0;32mI (3196) STATE_MACHINE: Running: Speed=588.00 Hz, Duty=9.99%[0m
+[0;32mI (3206) STATE_MACHINE: Running: Speed=588.50 Hz, Duty=9.99%[0m
+[0;32mI (3216) STATE_MACHINE: Running: Speed=589.00 Hz, Duty=9.99%[0m
+[0;32mI (3216) STATE_MACHINE: Running: Speed=589.50 Hz, Duty=9.99%[0m
+[0;32mI (3226) STATE_MACHINE: Running: Speed=590.00 Hz, Duty=9.99%[0m
+[0;32mI (3236) STATE_MACHINE: Running: Speed=590.50 Hz, Duty=9.99%[0m
+[0;32mI (3246) STATE_MACHINE: Running: Speed=591.00 Hz, Duty=9.99%[0m
+[0;32mI (3256) STATE_MACHINE: Running: Speed=591.50 Hz, Duty=9.99%[0m
+[0;32mI (3256) STATE_MACHINE: Running: Speed=592.00 Hz, Duty=9.99%[0m
+[0;32mI (3266) STATE_MACHINE: Running: Speed=592.50 Hz, Duty=9.99%[0m
+[0;32mI (3276) STATE_MACHINE: Running: Speed=593.00 Hz, Duty=9.99%[0m
+[0;32mI (3286) STATE_MACHINE: Running: Speed=593.50 Hz, Duty=9.99%[0m
+[0;32mI (3286) STATE_MACHINE: Running: Speed=594.00 Hz, Duty=9.99%[0m
+[0;32mI (3296) STATE_MACHINE: Running: Speed=594.50 Hz, Duty=9.99%[0m
+[0;32mI (3306) STATE_MACHINE: Running: Speed=595.00 Hz, Duty=9.99%[0m
+[0;32mI (3316) STATE_MACHINE: Running: Speed=595.50 Hz, Duty=9.99%[0m
+[0;32mI (3316) STATE_MACHINE: Running: Speed=596.00 Hz, Duty=9.99%[0m
+[0;32mI (3326) STATE_MACHINE: Running: Speed=596.50 Hz, Duty=9.99%[0m
+[0;32mI (3336) STATE_MACHINE: Running: Speed=597.00 Hz, Duty=9.99%[0m
+[0;32mI (3346) STATE_MACHINE: Running: Speed=597.50 Hz, Duty=9.99%[0m
+[0;32mI (3356) STATE_MACHINE: Running: Speed=598.00 Hz, Duty=9.99%[0m
+[0;32mI (3356) STATE_MACHINE: Running: Speed=598.50 Hz, Duty=9.99%[0m
+[0;32mI (3366) STATE_MACHINE: Running: Speed=599.00 Hz, Duty=9.99%[0m
+[0;32mI (3376) STATE_MACHINE: Running: Speed=599.50 Hz, Duty=9.99%[0m
+[0;32mI (3386) STATE_MACHINE: Running: Speed=600.00 Hz, Duty=9.99%[0m
+[0;32mI (3386) STATE_MACHINE: Running: Speed=600.50 Hz, Duty=9.99%[0m
+[0;32mI (3396) STATE_MACHINE: Running: Speed=601.00 Hz, Duty=9.99%[0m
+[0;32mI (3406) STATE_MACHINE: Running: Speed=601.50 Hz, Duty=9.99%[0m
+[0;32mI (3416) STATE_MACHINE: Running: Speed=602.00 Hz, Duty=9.99%[0m
+[0;32mI (3416) STATE_MACHINE: Running: Speed=602.50 Hz, Duty=9.99%[0m
+[0;32mI (3426) STATE_MACHINE: Running: Speed=603.00 Hz, Duty=9.99%[0m
+[0;32mI (3436) STATE_MACHINE: Running: Speed=603.50 Hz, Duty=9.99%[0m
+[0;32mI (3446) STATE_MACHINE: Running: Speed=604.00 Hz, Duty=9.99%[0m
+[0;32mI (3456) STATE_MACHINE: Running: Speed=604.50 Hz, Duty=9.99%[0m
+[0;32mI (3456) STATE_MACHINE: Running: Speed=605.00 Hz, Duty=9.99%[0m
+[0;32mI (3466) STATE_MACHINE: Running: Speed=605.50 Hz, Duty=9.99%[0m
+[0;32mI (3476) STATE_MACHINE: Running: Speed=606.00 Hz, Duty=9.99%[0m
+[0;32mI (3486) STATE_MACHINE: Running: Speed=606.50 Hz, Duty=9.99%[0m
+[0;32mI (3486) STATE_MACHINE: Running: Speed=607.00 Hz, Duty=9.99%[0m
+[0;32mI (3496) STATE_MACHINE: Running: Speed=607.50 Hz, Duty=9.99%[0m
+[0;32mI (3506) STATE_MACHINE: Running: Speed=608.00 Hz, Duty=9.99%[0m
+[0;32mI (3516) STATE_MACHINE: Running: Speed=608.50 Hz, Duty=9.99%[0m
+[0;32mI (3516) STATE_MACHINE: Running: Speed=609.00 Hz, Duty=9.99%[0m
+[0;32mI (3526) STATE_MACHINE: Running: Speed=609.50 Hz, Duty=9.99%[0m
+[0;32mI (3536) STATE_MACHINE: Running: Speed=610.00 Hz, Duty=9.99%[0m
+[0;32mI (3546) STATE_MACHINE: Running: Speed=610.50 Hz, Duty=9.99%[0m
+[0;32mI (3556) STATE_MACHINE: Running: Speed=611.00 Hz, Duty=9.99%[0m
+[0;32mI (3556) STATE_MACHINE: Running: Speed=611.50 Hz, Duty=9.99%[0m
+[0;32mI (3566) STATE_MACHINE: Running: Speed=612.00 Hz, Duty=9.99%[0m
+[0;32mI (3576) STATE_MACHINE: Running: Speed=612.50 Hz, Duty=9.99%[0m
+[0;32mI (3586) STATE_MACHINE: Running: Speed=613.00 Hz, Duty=9.99%[0m
+[0;32mI (3586) STATE_MACHINE: Running: Speed=613.50 Hz, Duty=9.99%[0m
+[0;32mI (3596) STATE_MACHINE: Running: Speed=614.00 Hz, Duty=9.98%[0m
+[0;32mI (3606) STATE_MACHINE: Running: Speed=614.50 Hz, Duty=9.98%[0m
+[0;32mI (3616) STATE_MACHINE: Running: Speed=615.00 Hz, Duty=9.98%[0m
+[0;32mI (3626) STATE_MACHINE: Running: Speed=615.50 Hz, Duty=9.98%[0m
+[0;32mI (3626) STATE_MACHINE: Running: Speed=616.00 Hz, Duty=9.98%[0m
+[0;32mI (3636) STATE_MACHINE: Running: Speed=616.50 Hz, Duty=9.98%[0m
+[0;32mI (3646) STATE_MACHINE: Running: Speed=617.00 Hz, Duty=9.98%[0m
+[0;32mI (3656) STATE_MACHINE: Running: Speed=617.50 Hz, Duty=9.98%[0m
+[0;32mI (3656) STATE_MACHINE: Running: Speed=618.00 Hz, Duty=9.98%[0m
+[0;32mI (3666) STATE_MACHINE: Running: Speed=618.50 Hz, Duty=9.98%[0m
+[0;32mI (3676) STATE_MACHINE: Running: Speed=619.00 Hz, Duty=9.98%[0m
+[0;32mI (3686) STATE_MACHINE: Running: Speed=619.50 Hz, Duty=9.98%[0m
+[0;32mI (3686) STATE_MACHINE: Running: Speed=620.00 Hz, Duty=9.97%[0m
+[0;32mI (3696) STATE_MACHINE: Running: Speed=620.50 Hz, Duty=9.97%[0m
+[0;32mI (3706) STATE_MACHINE: Running: Speed=621.00 Hz, Duty=9.97%[0m
+[0;32mI (3716) STATE_MACHINE: Running: Speed=621.50 Hz, Duty=9.97%[0m
+[0;32mI (3726) STATE_MACHINE: Running: Speed=622.00 Hz, Duty=9.97%[0m
+[0;32mI (3726) STATE_MACHINE: Running: Speed=622.50 Hz, Duty=9.97%[0m
+[0;32mI (3736) STATE_MACHINE: Running: Speed=623.00 Hz, Duty=9.97%[0m
+[0;32mI (3746) STATE_MACHINE: Running: Speed=623.50 Hz, Duty=9.97%[0m
+[0;32mI (3756) STATE_MACHINE: Running: Speed=624.00 Hz, Duty=9.97%[0m
+[0;32mI (3756) STATE_MACHINE: Running: Speed=624.50 Hz, Duty=9.96%[0m
+[0;32mI (3766) STATE_MACHINE: Running: Speed=625.00 Hz, Duty=9.96%[0m
+[0;32mI (3776) STATE_MACHINE: Running: Speed=625.50 Hz, Duty=9.96%[0m
+[0;32mI (3786) STATE_MACHINE: Running: Speed=626.00 Hz, Duty=9.96%[0m
+[0;32mI (3786) STATE_MACHINE: Running: Speed=626.50 Hz, Duty=9.96%[0m
+[0;32mI (3796) STATE_MACHINE: Running: Speed=627.00 Hz, Duty=9.96%[0m
+[0;32mI (3806) STATE_MACHINE: Running: Speed=627.50 Hz, Duty=9.96%[0m
+[0;32mI (3816) STATE_MACHINE: Running: Speed=628.00 Hz, Duty=9.96%[0m
+[0;32mI (3826) STATE_MACHINE: Running: Speed=628.50 Hz, Duty=9.95%[0m
+[0;32mI (3826) STATE_MACHINE: Running: Speed=629.00 Hz, Duty=9.95%[0m
+[0;32mI (3836) STATE_MACHINE: Running: Speed=629.50 Hz, Duty=9.95%[0m
+[0;32mI (3846) STATE_MACHINE: Running: Speed=630.00 Hz, Duty=9.95%[0m
+[0;32mI (3856) STATE_MACHINE: Running: Speed=630.50 Hz, Duty=9.95%[0m
+[0;32mI (3856) STATE_MACHINE: Running: Speed=631.00 Hz, Duty=9.95%[0m
+[0;32mI (3866) STATE_MACHINE: Running: Speed=631.50 Hz, Duty=9.94%[0m
+[0;32mI (3876) STATE_MACHINE: Running: Speed=632.00 Hz, Duty=9.94%[0m
+[0;32mI (3886) STATE_MACHINE: Running: Speed=632.50 Hz, Duty=9.94%[0m
+[0;32mI (3886) STATE_MACHINE: Running: Speed=633.00 Hz, Duty=9.94%[0m
+[0;32mI (3896) STATE_MACHINE: Running: Speed=633.50 Hz, Duty=9.94%[0m
+[0;32mI (3906) STATE_MACHINE: Running: Speed=634.00 Hz, Duty=9.94%[0m
+[0;32mI (3916) STATE_MACHINE: Running: Speed=634.50 Hz, Duty=9.93%[0m
+[0;32mI (3926) STATE_MACHINE: Running: Speed=635.00 Hz, Duty=9.93%[0m
+[0;32mI (3926) STATE_MACHINE: Running: Speed=635.50 Hz, Duty=9.93%[0m
+[0;32mI (3936) STATE_MACHINE: Running: Speed=636.00 Hz, Duty=9.93%[0m
+[0;32mI (3946) STATE_MACHINE: Running: Speed=636.50 Hz, Duty=9.93%[0m
+[0;32mI (3956) STATE_MACHINE: Running: Speed=637.00 Hz, Duty=9.93%[0m
+[0;32mI (3956) STATE_MACHINE: Running: Speed=637.50 Hz, Duty=9.92%[0m
+[0;32mI (3966) STATE_MACHINE: Running: Speed=638.00 Hz, Duty=9.92%[0m
+[0;32mI (3976) STATE_MACHINE: Running: Speed=638.50 Hz, Duty=9.92%[0m
+[0;32mI (3986) STATE_MACHINE: Running: Speed=639.00 Hz, Duty=9.92%[0m
+[0;32mI (3986) STATE_MACHINE: Running: Speed=639.50 Hz, Duty=9.92%[0m
+[0;32mI (3996) STATE_MACHINE: Running: Speed=640.00 Hz, Duty=9.91%[0m
+[0;32mI (4006) STATE_MACHINE: Running: Speed=640.50 Hz, Duty=9.91%[0m
+[0;32mI (4016) STATE_MACHINE: Running: Speed=641.00 Hz, Duty=9.91%[0m
+[0;32mI (4026) STATE_MACHINE: Running: Speed=641.50 Hz, Duty=9.91%[0m
